@@ -86,19 +86,19 @@ function App() {
       </button>
 
       {result && (
-  <div style={{ 
-    background: '#2d3748', // Темный фон для темной темы
-    color: '#ffffff',      // Белый текст
-    padding: '15px', 
-    borderRadius: '5px', 
-    marginTop: '20px',
-    border: '1px solid #4a5568' // Граница для контраста
-  }}>
-    <p>Чаевые: <strong>${result.totalTip}</strong></p>
-    <p>Чаевые с человека: <strong>${result.totalPerPerson}</strong></p>
-    <p>Итого с человека: <strong>${result.totalPerPerson}</strong></p>
-  </div>
-)}
+        <div style={{ 
+          background: '#2d3748',
+          color: '#ffffff',
+          padding: '15px', 
+          borderRadius: '5px', 
+          marginTop: '20px',
+          border: '1px solid #4a5568'
+        }}>
+          <p>Чаевые: <strong>${result.totalTip}</strong></p>
+          <p>Чаевые с человека: <strong>${result.tipPerPerson}</strong></p> {/* Исправлено здесь */}
+          <p>Итого с человека: <strong>${result.totalPerPerson}</strong></p>
+        </div>
+      )}
     </div>
   );
 }
